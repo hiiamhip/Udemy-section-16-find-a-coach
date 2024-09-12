@@ -50,7 +50,7 @@ h1 a.router-link-active {
 }
 
 header nav {
-  width: 80%;
+  width: 75%;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -58,6 +58,7 @@ header nav {
 }
 
 header ul {
+  min-width: 350px;
   list-style: none;
   margin: 0;
   padding: 1rem;
