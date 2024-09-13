@@ -1,28 +1,30 @@
 <template>
-  <base-card>
-    <div>
-      <h2>{{ coachName }}</h2>
-      <h3>${{ coachRate }}/hour</h3>
-    </div>
-  </base-card>
-  <base-card>
-    <form @submit.prevent="submitForm">
-      <div class="form-control">
-        <label for="email">Your E-mail</label>
-        <input type="email" id="email" v-model.trim="email" />
+  <div class="use-for-animation">
+    <base-card>
+      <div>
+        <h2>{{ coachName }}</h2>
+        <h3>${{ coachRate }}/hour</h3>
       </div>
-      <div class="form-control">
-        <label for="message">Message</label>
-        <textarea rows="5" id="message" v-model.trim="message"></textarea>
-      </div>
-      <p class="errors" v-if="!formIsValid">
-        Please enter a valid email and non-empty message.
-      </p>
-      <div class="action">
-        <base-button>Send message</base-button>
-      </div>
-    </form>
-  </base-card>
+    </base-card>
+    <base-card>
+      <form @submit.prevent="submitForm">
+        <div class="form-control">
+          <label for="email">Your E-mail</label>
+          <input type="email" id="email" v-model.trim="email" />
+        </div>
+        <div class="form-control">
+          <label for="message">Message</label>
+          <textarea rows="5" id="message" v-model.trim="message"></textarea>
+        </div>
+        <p class="errors" v-if="!formIsValid">
+          Please enter a valid email and non-empty message.
+        </p>
+        <div class="action">
+          <base-button>Send message</base-button>
+        </div>
+      </form>
+    </base-card>
+  </div>
 </template>
 
 <script>
